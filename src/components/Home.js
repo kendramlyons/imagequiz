@@ -35,7 +35,10 @@ class Home extends React.Component {
 
     body = () => {
         return(
-        <div>Hello from my homepage!</div>
+        <div>Hello from my homepage!</div>,
+        <div id="flowersDiv"> 
+
+        </div>
         );
     }
 
