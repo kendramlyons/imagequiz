@@ -18,7 +18,7 @@ class Home extends React.Component {
             }
         }
        let daffodil = new Flower('Daffodil', 'daffodil.png');
-       let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
+       let cherryblossom = new Flower('Cherry Blossom', 'cherryblossom.png');
        let lily = new Flower('Lily', 'lily.jpg');
        let daisy = new Flower('Daisy', 'daisy.jpg');
        let sunflower = new Flower('Sunflower', 'sunflower.png');
