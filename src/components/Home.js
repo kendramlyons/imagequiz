@@ -1,75 +1,74 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
-// import Login from './Login';
 //can use either "class" or "function" keyword
 class Home extends React.Component {
     constructor(props) { //'props' is always passed to constructor
         super(props); //have to have 'super' or else error
         this.state = {
-            showLoginForm: false,
-            username: '',
-            authenticated: false
+            username: ''
         };
     }
 
-    login = () => { //show login page
-        //needs a state change
-        this.setState({ //changing states causes page to re-render
-            showLoginForm: true
-        });
-    }
-
-    onSubmit = (event) => {
-        //check if user has provided input for user
-        if(this.state.username.trim().length > 0) {
-            this.setState({authenticated:true});
-        }
-        event.preventDefault(); //tells the browser not to do default 
-    }
-
-    handleChange = (event) => {
-        const value = event.target.value;
-        const name = event.target.name;
-        this.setState({[name]: value});
-    }
-
-    body = () => {
-        return(
-        <div>Hello from my homepage!</div>,
-        <div id="flowersDiv"> 
-
-        </div>
-        );
-    }
+    // body = () => {
+    //     return(
+    //     <div>Welcome to Imagequiz!</div>,
+    //     <div id="flowersDiv"> 
+    //     </div>
+    //     );
+    // }
 
     render() {
-        if((!this.state.authenticated) && this.state.showLoginForm) {
-            //shows 
-            return(
-                <form onSubmit={this.onSubmit}>
-                    <label>Username:</label>
-                    <input 
-                    type="text" 
-                    name="username"
-                    value={this.state.username}
-                    onChange={this.handleChange}
-                    ></input>
-                    <button type="submit">Login</button>
-                </form>
-            );
+        let dummyArray = ['cherryblossom.png', 'daisy.jpg'];
+        class Flower {
+           constructor(name, pictureName) {
+               this.name = name;
+               this.picture = pictureName;
+            }
         }
+       let daffodil = new Flower('Daffodil', 'daffodil.png');
+       let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
+       let lily = new Flower('Lily', 'lily.jpg');
+       let daisy = new Flower('Daisy', 'daisy.jpg');
+       let sunflower = new Flower('Sunflower', 'sunflower.png');
+       let tulip = new Flower('Tulip', 'tulip.png');
+       let rose = new Flower('Rose', 'rose.png');
+       let waterlily = new Flower('Water lily', 'waterlily.png');
+       
+       let flowers = [
+             cherryblossom,
+             daffodil,
+             daisy,
+             lily,
+             rose,
+             sunflower,
+             tulip,
+             waterlily
+       ];
+
+        let username = '';
+        const location = this.props.location;
+        if (location) {
+            if (location.state) {
+                if (location.state.user) {
+                    username = location.state.user;
+                }
+            }
+        };
+
         return(
             //HTML code to display initially
             <div>
                 <div className="loginButton">
-                 {this.state.authenticated ? this.state.username 
-                    : <button onClick={this.login}>Login</button>}
+                    {username.length > 0 ? username 
+                    : <Link to='/login'>Login</Link>}
                 </div>
-                {this.body()}
+                <div>Welcome to Imagequiz!</div>
+                <div id="flowersDiv"> 
+                    {flowers.map(p => <img src = {require('../images/'+p.picture)} alt = {p.name}></img>)}
+                </div>
             </div>
         );
-
     }
 }
-
 export default Home;
