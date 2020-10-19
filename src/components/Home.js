@@ -57,7 +57,11 @@ class Home extends React.Component {
                 <br></br>
                 <div id="header">Welcome to ImageQuiz!</div>
                 <div id="flowersDiv"> 
-                    {flowers.map(p => <img src = {require('../images/'+p.picture)} alt = {p.name} title = {p.name}></img>)}
+                    {flowers.map(p => 
+                    <figure>
+                    <img src = {require('../images/'+p.picture)} alt = {p.name} ></img>
+                    <figcaption>{p.name}</figcaption>
+                    </figure>)}
                 </div>
             </div>
         );
