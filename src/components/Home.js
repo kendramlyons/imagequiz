@@ -19,7 +19,6 @@ class Home extends React.Component {
     // }
 
     render() {
-        let dummyArray = ['cherryblossom.png', 'daisy.jpg'];
         class Flower {
            constructor(name, pictureName) {
                this.name = name;
@@ -58,14 +57,14 @@ class Home extends React.Component {
 
         return(
             //HTML code to display initially
-            <div>
-                <div className="loginButton">
+            <div id="mainBody">
+                <div id="loginLink">
                     {username.length > 0 ? username 
                     : <Link to='/login'>Login</Link>}
                 </div>
-                <div>Welcome to Imagequiz!</div>
+                <div id="header">Welcome to Imagequiz!</div>
                 <div id="flowersDiv"> 
-                    {flowers.map(p => <img src = {require('../images/'+p.picture)} alt = {p.name}></img>)}
+                    {flowers.map(p => <img src = {require('../images/'+p.picture)} alt = {p.name} title = {p.name}></img>)}
                 </div>
             </div>
         );
