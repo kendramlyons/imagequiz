@@ -10,14 +10,6 @@ class Home extends React.Component {
         };
     }
 
-    // body = () => {
-    //     return(
-    //     <div>Welcome to Imagequiz!</div>,
-    //     <div id="flowersDiv"> 
-    //     </div>
-    //     );
-    // }
-
     render() {
         class Flower {
            constructor(name, pictureName) {
@@ -62,7 +54,8 @@ class Home extends React.Component {
                     {username.length > 0 ? username 
                     : <Link to='/login'>Login</Link>}
                 </div>
-                <div id="header">Welcome to Imagequiz!</div>
+                <br></br>
+                <div id="header">Welcome to ImageQuiz!</div>
                 <div id="flowersDiv"> 
                     {flowers.map(p => <img src = {require('../images/'+p.picture)} alt = {p.name} title = {p.name}></img>)}
                 </div>
