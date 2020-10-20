@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/imagequiz/static/css/main.3c12bb88.chunk.css",
-    "main.js": "/imagequiz/static/js/main.6d853934.chunk.js",
-    "main.js.map": "/imagequiz/static/js/main.6d853934.chunk.js.map",
+    "main.css": "/imagequiz/static/css/main.cfd8eec3.chunk.css",
+    "main.js": "/imagequiz/static/js/main.49ae3d4f.chunk.js",
+    "main.js.map": "/imagequiz/static/js/main.49ae3d4f.chunk.js.map",
     "runtime-main.js": "/imagequiz/static/js/runtime-main.2f3f5ace.js",
     "runtime-main.js.map": "/imagequiz/static/js/runtime-main.2f3f5ace.js.map",
     "static/js/2.d82e8827.chunk.js": "/imagequiz/static/js/2.d82e8827.chunk.js",
     "static/js/2.d82e8827.chunk.js.map": "/imagequiz/static/js/2.d82e8827.chunk.js.map",
     "index.html": "/imagequiz/index.html",
-    "precache-manifest.c18bb95601b47bf18a4d3b991be02071.js": "/imagequiz/precache-manifest.c18bb95601b47bf18a4d3b991be02071.js",
+    "precache-manifest.3e1fe74ab60f8625a4f496182ff5ad86.js": "/imagequiz/precache-manifest.3e1fe74ab60f8625a4f496182ff5ad86.js",
     "service-worker.js": "/imagequiz/service-worker.js",
-    "static/css/main.3c12bb88.chunk.css.map": "/imagequiz/static/css/main.3c12bb88.chunk.css.map",
+    "static/css/main.cfd8eec3.chunk.css.map": "/imagequiz/static/css/main.cfd8eec3.chunk.css.map",
     "static/js/2.d82e8827.chunk.js.LICENSE.txt": "/imagequiz/static/js/2.d82e8827.chunk.js.LICENSE.txt",
     "static/media/cherryblossom.png": "/imagequiz/static/media/cherryblossom.b610ae10.png",
     "static/media/daffodil.png": "/imagequiz/static/media/daffodil.88848efd.png",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.2f3f5ace.js",
     "static/js/2.d82e8827.chunk.js",
-    "static/css/main.3c12bb88.chunk.css",
-    "static/js/main.6d853934.chunk.js"
+    "static/css/main.cfd8eec3.chunk.css",
+    "static/js/main.49ae3d4f.chunk.js"
   ]
 }
