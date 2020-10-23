@@ -55,12 +55,11 @@ class Home extends React.Component {
         return(
             //HTML code to display initially
             <div id="mainBody">
+                <div id="header"><h1>Welcome to ImageQuiz!</h1></div>
                 <div id="loginLink">
                     {username.length > 0 ? username 
                     : <Link to='/login'>Login</Link>}
                 </div>
-                <br></br>
-                <div id="header">Welcome to ImageQuiz!</div>
                 <div id="flowersDiv"> 
                     {this.state.quizzes.map(q => 
                     <Link to = {{pathname: '/quiz', state:{quiz:q} }}>
