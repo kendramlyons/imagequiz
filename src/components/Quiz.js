@@ -1,5 +1,7 @@
 import React from 'react';
 import Question from './Question';
+import { Link } from 'react-router-dom';
+import './Quiz.css';
 class Quiz extends React.Component {
     constructor(props) { //'props' is always passed to constructor
         super(props); //have to have 'super' or else error
@@ -37,11 +39,16 @@ class Quiz extends React.Component {
             }
         };
         return(<div>
-                <Question item={quiz.questions[this.state.cursor]} cursor={this.state.cursor}
-                    onAnswer={this.updateScore}></Question>
-                <button onClick = {this.goBack}>Back</button>
-                <button onClick = {this.goToNext}>Next</button>
-                <div>Score: {this.state.score}</div>
+                <div id='home'><Link to='/' id='hometext'>ImageQuiz</Link></div>
+                <div id='question'>
+                    <Question item={quiz.questions[this.state.cursor]} cursor={this.state.cursor}
+                        onAnswer={this.updateScore}></Question>
+                </div>
+                <div id='buttons'>
+                    <button onClick = {this.goBack}>Back</button>
+                    <button onClick = {this.goToNext}>Next</button>
+                </div>
+                <div id = "score">Score: {this.state.score}</div>
             </div>
         );
     }

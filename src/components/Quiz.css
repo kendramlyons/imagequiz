@@ -1,0 +1,47 @@
+#question {
+    display: block;
+    padding:20px;
+    background-color: lightgreen;
+    margin-left:10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: auto;
+}
+#home {
+    display: block;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: dotted;
+    padding: 5px;
+    margin: 15px;
+    background-color: mediumpurple;
+}
+#home:hover {
+    color: lightgreen;
+}
+#hometext:hover {
+    color: lightgreen;
+    text-decoration: none;
+}
+#hometext:link {
+    text-decoration: none;
+    color: lightseagreen;
+}
+#score {
+    display: block;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: dotted;
+    padding: 5px;
+    margin-left: 20px;
+    background-color: lightseagreen;;
+}
+#buttons {
+    display:block;
+    float:right;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: dotted;
+    padding: 5px;
+    margin-right: 20px;
+    background-color: lightseagreen;
+}

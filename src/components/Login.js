@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import './Login.css';
 
 class Login extends React.Component {
     constructor(props) { //'props' is always passed to constructor
@@ -35,7 +36,8 @@ class Login extends React.Component {
 
         return(
             <div>
-                <form onSubmit={this.onSubmit}>
+                <div id="header"><h2>ImageQuiz Login</h2></div>
+                <form onSubmit={this.onSubmit} id="form">
                     <label>Username: </label>
                     <input 
                     type="text" 
