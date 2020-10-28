@@ -1,3 +1,15 @@
+/* styling for Question component */
+#question {
+    margin: 10px;
+    font-size: larger;
+    text-align: center;
+}
+#flowerpic {
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+}
+/* styling for Quiz component */
 #quiz {
     display: block;
     padding:20px;
@@ -28,19 +40,19 @@
 }
 #score {
     display: block;
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;
-    border-style: dotted;
-    padding: 5px;
-    margin-left: 20px;
-    background-color: lightseagreen;;
-}
-#buttons {
-    display:block;
-    float:right;
+    float: right;
     font-family: Arial, Helvetica, sans-serif;
     border-style: dotted;
     padding: 5px;
     margin-right: 20px;
+    background-color: lightseagreen;;
+}
+#buttons {
+    display:block;
+    float:left;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: dotted;
+    padding: 5px;
+    margin-left: 20px;
     background-color: lightseagreen;
 }

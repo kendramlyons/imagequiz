@@ -1,4 +1,5 @@
 import React from 'react';
+import './Quiz.css';
 
 class Question extends React.Component {
     constructor(props) { //'props' is always passed to constructor
@@ -17,11 +18,13 @@ class Question extends React.Component {
     };
     render() {
         return (<div>
-            <img src = {require('../images/'+this.props.item.picture)} alt={this.props.item.picture}></img>
-            <div>
+            <div id='question'>
                 {this.props.item.title}
             </div>
-            <div>
+            <img src = {require('../images/'+this.props.item.picture)} 
+                alt={this.props.item.picture} id='flowerpic'></img>
+            <br/>
+            <div id='choices'>
                 {this.props.item.choices.map(c => 
                     <div>
                     <input type="radio" id={c} name="choice" value={c} onChange={this.saveAnswer} 
