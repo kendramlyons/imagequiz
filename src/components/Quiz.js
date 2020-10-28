@@ -19,6 +19,13 @@ class Quiz extends React.Component {
             }
             this.setState({cursor : this.state.cursor + 1, score: newScore});
         }
+        else if (this.state.cursor === this.props.location.state.quiz.questions.length - 1) {
+            let finalScore = this.state.score;
+            if (this.state.lastAnswerCorrect) {
+                finalScore += 1;
+            }
+            this.setState({score: finalScore});
+        }
     }
     goBack = () => {
         if (this.state.cursor > 0) {
@@ -40,7 +47,7 @@ class Quiz extends React.Component {
         };
         return(<div>
                 <div id='home'><Link to='/' id='hometext'>ImageQuiz</Link></div>
-                <div id='question'>
+                <div id='quiz'>
                     <Question item={quiz.questions[this.state.cursor]} cursor={this.state.cursor}
                         onAnswer={this.updateScore}></Question>
                 </div>

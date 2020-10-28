@@ -6,7 +6,15 @@
     border-style: dotted;
     padding: 5px;
     margin: 5px;
-    
+}
+#logintext:link {
+    text-decoration: none;
+}
+#loginLink:hover {
+    color:  lightseagreen;
+}
+#logintext:hover {
+    color: lightgreen;
 }
 #flowersDiv {
     display: inline-flex;
@@ -15,11 +23,9 @@
     border: dotted;
     background-color: lightgreen;
     margin: 10px;
-
 }
 figcaption {
     text-align: center;
-
 }
 #header {
     text-align: center;

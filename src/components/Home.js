@@ -58,7 +58,7 @@ class Home extends React.Component {
                 <div id="header"><h1>Welcome to ImageQuiz!</h1></div>
                 <div id="loginLink">
                     {username.length > 0 ? username 
-                    : <Link to='/login'>Login</Link>}
+                    : <Link to='/login' id='logintext'>Login</Link>}
                 </div>
                 <div id="flowersDiv"> 
                     {this.state.quizzes.map(q => 
