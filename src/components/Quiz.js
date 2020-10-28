@@ -19,7 +19,8 @@ class Quiz extends React.Component {
             }
             this.setState({cursor : this.state.cursor + 1, score: newScore});
         }
-        else if (this.state.cursor === this.props.location.state.quiz.questions.length - 1) {
+        else if ((this.state.cursor === this.props.location.state.quiz.questions.length - 1)
+                && this.state.score < 6) {
             let finalScore = this.state.score;
             if (this.state.lastAnswerCorrect) {
                 finalScore += 1;
