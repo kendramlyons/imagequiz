@@ -29,7 +29,7 @@ const q5 = {
     correct: 'cherry blossom'
 }
 const q6 = {
-    title: 'what is this?',
+    title: 'What is this?',
     picture: 'tulip.png',
     choices: ['tulip', 'cherry blossom', 'lily', 'rose'],
     correct: 'tulip'
