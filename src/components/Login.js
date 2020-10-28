@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 class Login extends React.Component {
@@ -37,6 +38,7 @@ class Login extends React.Component {
         return(
             <div>
                 <div id="header"><h2>ImageQuiz Login</h2></div>
+                <div id='home'><Link to='/' id='hometext'>ImageQuiz</Link></div>
                 <form onSubmit={this.onSubmit} id="form">
                     <label>Username: </label>
                     <input 

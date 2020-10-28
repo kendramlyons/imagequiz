@@ -5,7 +5,8 @@
     font-style: italic;
     border-style: dotted;
     padding: 5px;
-    margin: 5px;
+    margin-right: 20px;
+    clear: left;
 }
 #logintext:link {
     text-decoration: none;
@@ -19,13 +20,18 @@
 #flowersDiv {
     display: inline-flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 95%;
     border: dotted;
     background-color: lightgreen;
     margin: 10px;
 }
+#flowersDiv:hover {
+    border-color: lightseagreen;;
+}
 figcaption {
     text-align: center;
+    font-weight: bold;
+    color: darkgreen;
 }
 #header {
     text-align: center;
