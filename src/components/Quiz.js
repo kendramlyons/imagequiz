@@ -30,7 +30,8 @@ class Quiz extends React.Component {
     }
     goBack = () => {
         if (this.state.cursor > 0) {
-            this.setState({cursor: this.state.cursor - 1});
+            this.setState({cursor: this.state.cursor - 1, lastAnswerCorrect: false});
+
         }
     }
     updateScore = (correct) => {
@@ -56,7 +57,7 @@ class Quiz extends React.Component {
                     <button onClick = {this.goBack}>Back</button>
                     <button onClick = {this.goToNext}>Next</button>
                 </div>
-                <div id = "score">Score: {this.state.score}</div>
+                <div id = "score">Score: {this.state.score}/6</div>
             </div>
         );
     }

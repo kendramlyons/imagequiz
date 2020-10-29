@@ -16,32 +16,6 @@ class Home extends React.Component {
         this.setState({quizzes: data});
     }
     render() {
-    //     class Flower {
-    //        constructor(name, pictureName) {
-    //            this.name = name;
-    //            this.picture = pictureName;
-    //         }
-    //     }
-    //    let daffodil = new Flower('Daffodil', 'daffodil.png');
-    //    let cherryblossom = new Flower('Cherry Blossom', 'cherryblossom.png');
-    //    let lily = new Flower('Lily', 'lily.jpg');
-    //    let daisy = new Flower('Daisy', 'daisy.jpg');
-    //    let sunflower = new Flower('Sunflower', 'sunflower.png');
-    //    let tulip = new Flower('Tulip', 'tulip.png');
-    //    let rose = new Flower('Rose', 'rose.png');
-    //    let waterlily = new Flower('Water Lily', 'waterlily.png');
-       
-    //    let flowers = [
-    //          cherryblossom,
-    //          daffodil,
-    //          daisy,
-    //          lily,
-    //          rose,
-    //          sunflower,
-    //          tulip,
-    //          waterlily
-    //    ];
-
         let username = '';
         const location = this.props.location;
         if (location) {
