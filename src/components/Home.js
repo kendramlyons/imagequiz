@@ -12,8 +12,7 @@ class Home extends React.Component {
         };
     }
     componentDidMount(){
-        let data = server.fetchQuizzes();
-        this.setState({quizzes: data});
+        server.fetchQuizzes().then(x => this.setState({quizzes: x})).catch(e => console.log(e));
     }
     render() {
         let username = '';
@@ -25,7 +24,6 @@ class Home extends React.Component {
                 }
             }
         };
-
         return(
             //HTML code to display initially
             <div id="mainBody">
@@ -36,7 +34,7 @@ class Home extends React.Component {
                 </div>
                 <div id="flowersDiv"> 
                     {this.state.quizzes.map(q => 
-                    <Link to = {{pathname: '/quiz', state:{quiz:q} }}>
+                    <Link to = {{pathname: '/quiz', state:{quiz:q, user:username} }}>
                     <figure>
                     <img src = {require('../images/'+q.picture)} alt = {q.title} ></img>
                     <figcaption>{q.title}</figcaption>
